@@ -1,13 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export const Cards = () => {
+export const Cards = props => {
 	return (
 		<div>
 			<div className="card">
 				<img src="http://www.servithermic.cl/images/400X200.gif" className="card-img-top" alt="..." />
 				<div className="card-body">
-					<h4 className="card-title">Darth Vader</h4>
+					<h4 className="card-title" />
 					<p className="card-text">
 						Gender: male <br />
 						Hair Color: none <br />

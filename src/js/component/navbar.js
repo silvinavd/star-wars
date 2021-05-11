@@ -14,7 +14,7 @@ export const Navbar = () => {
 				</div>
 				<div className="nav-item dropdown navbar-nav ml-auto">
 					<button
-						className="btn btn-outline-success dropdown-toggle m-2"
+						className="btn btn-outline-dark dropdown-toggle m-2 mr-4"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
@@ -22,7 +22,7 @@ export const Navbar = () => {
 						aria-expanded="false">
 						Favorites
 					</button>
-					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
 						<a className="dropdown-item" href="#">
 							Action
 						</a>
