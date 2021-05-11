@@ -14,7 +14,7 @@ export const Navbar = () => {
 				</div>
 				<div className="nav-item dropdown navbar-nav ml-auto">
 					<button
-						className="btn btn-outline-success dropdown-toggle"
+						className="btn btn-outline-success dropdown-toggle m-2"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
