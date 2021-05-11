@@ -14,9 +14,13 @@ export const Cards = props => {
 						Hair Color: none <br />
 						Eye-Color: yellow
 					</p>
-					<button type="button" className="btn btn-outline-primary btn-lg">
-						Learn more!
-					</button>
+					<div>
+						<Link to="/info">
+							<button type="button" className="btn btn-outline-primary btn-lg">
+								Learn more!
+							</button>
+						</Link>
+					</div>
 					<button type="button" className="btn btn-outline-warning btn-lg float-right">
 						<i className="fas fa-heart" />
 					</button>
