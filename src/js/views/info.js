@@ -13,35 +13,41 @@ export const Info = () => {
 	}, []);
 
 	return (
-		<div className="jumbotron jumbotron-fluid">
-			<div className="container">
-				<h1 className="display-4">{store.info != null ? store.info.name : ""}</h1>
+		<div>
+			<h1 className="text-danger text-center ml-2 mb-3">Description</h1>
 
-				<div className="row flex-row text-danger justify-content-around">
-					<p>
-						Name <br />
+			<div className="jumbotron jumbotron-fluid background h-100 mt-5">
+				<div className="container">
+					<h1 className="display-4 text-dark text-center font-weight-bold">
 						{store.info != null ? store.info.name : ""}
-					</p>
-					<p>
-						Birth Year <br />
-						{store.info != null ? store.info.birth_year : ""}
-					</p>
-					<p>
-						Gender <br />
-						{store.info != null ? store.info.gender : ""}
-					</p>
-					<p>
-						Height <br />
-						{store.info != null ? store.info.height : ""}
-					</p>
-					<p>
-						Skin Color <br />
-						{store.info != null ? store.info.skin_color : ""}
-					</p>
-					<p>
-						Eye Color <br />
-						{store.info != null ? store.info.eye_color : ""}
-					</p>
+					</h1>
+					<br /> <hr />
+					<div className="row flex-row text-danger justify-content-around mt-4">
+						<p className="">
+							Name <br />
+							{store.info != null ? store.info.name : ""}
+						</p>
+						<p>
+							Birth Year <br />
+							{store.info != null ? store.info.birth_year : ""}
+						</p>
+						<p>
+							Gender <br />
+							{store.info != null ? store.info.gender : ""}
+						</p>
+						<p>
+							Height <br />
+							{store.info != null ? store.info.height : ""}
+						</p>
+						<p>
+							Skin Color <br />
+							{store.info != null ? store.info.skin_color : ""}
+						</p>
+						<p>
+							Eye Color <br />
+							{store.info != null ? store.info.eye_color : ""}
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

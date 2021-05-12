@@ -1,3 +1,11 @@
 .info{
 width: 600px;    color: red;
 }
+.background{
+    height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-image: url("https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-08.jpg");
+}

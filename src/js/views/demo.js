@@ -10,11 +10,11 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<h1 className="text-danger ml-2">Character</h1>
-			<div className="row d-flex-row overflow-auto flex-nowrap">
+			<h1 className="text-danger text-center ml-2 mb-3">Characters</h1>
+			<div className="row d-flex-row overflow-auto flex-nowrap ">
 				{store.personajes.map((item, index) => {
 					return (
-						<div key={index} className="col-lg-4 mb-5">
+						<div key={index} className="col-sm-3 mb-3">
 							<Cards name={item.name} id={item.uid} />
 						</div>
 					);

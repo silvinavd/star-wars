@@ -1,20 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export const Navbar = () => {
+import "../../styles/index.scss";
+
+export const Navbar = props => {
 	return (
 		<div>
-			<nav className="navbar navbar-expand-lg navbar-light bg-light p-0">
-				<div className="ml-5">
+			<nav className="navbar navbar-expand-lg bg-transparent p-0">
+				<Link to="/" className="ml-5">
 					<img
-						className="img-responsive ml-5"
-						style={{ width: "60px" }}
+						style={{ width: "80px" }}
 						src="https://www.freepnglogos.com/uploads/star-wars-logo-31.png"
+						className="ml-5"
 					/>
-				</div>
+				</Link>
+				<Link to="/">
+					<button className="btn btn-outline-dark text-light ml-5">Characters</button>
+				</Link>
+				<Link to={"/info/" + props.id}>
+					<button className="btn btn-outline-dark text-light ml-5">Description</button>
+				</Link>
 				<div className="nav-item dropdown navbar-nav ml-auto">
 					<button
-						className="btn btn-outline-dark dropdown-toggle m-2 mr-4"
+						className="btn btn-outline-dark dropdown-toggle m-2 mr-4 text-light"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
@@ -37,4 +46,8 @@ export const Navbar = () => {
 			</nav>
 		</div>
 	);
+};
+Navbar.propTypes = {
+	name: PropTypes.string,
+	id: PropTypes.string
 };
