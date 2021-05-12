@@ -25,11 +25,11 @@ const Layout = () => {
 					<Switch>
 						{/*<Route exact path="/home">
 							<Home />
-    </Route>*/}
+                        </Route>*/}
 						<Route exact path="/">
 							<Demo />
 						</Route>
-						<Route exact path="/info">
+						<Route exact path="/info/:id">
 							<Info />
 						</Route>
 						<Route exact path="/single/:theid">

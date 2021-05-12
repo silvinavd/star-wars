@@ -8,14 +8,14 @@ export const Cards = props => {
 			<div className="card">
 				<img src="http://www.servithermic.cl/images/400X200.gif" className="card-img-top" alt="..." />
 				<div className="card-body">
-					<h4 className="card-title" />
+					<h4 className="card-title">{props.name}</h4>
 					<p className="card-text">
-						Gender: male <br />
+						<br />
 						Hair Color: none <br />
 						Eye-Color: yellow
 					</p>
 					<div>
-						<Link to="/info">
+						<Link to={"/info/" + props.id}>
 							<button type="button" className="btn btn-outline-primary btn-lg">
 								Learn more!
 							</button>
@@ -28,4 +28,9 @@ export const Cards = props => {
 			</div>
 		</div>
 	);
+};
+
+Cards.propTypes = {
+	name: PropTypes.string,
+	id: PropTypes.string
 };
