@@ -1,9 +1,10 @@
-.bg{
-    height: 100%;
+.font {
+    font-family: 'Recursive', sans-serif;
+    font-size: 40px;
+    color: #cfb92b;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-    background-image: url("https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg");
+.fontsm{
+    font-family: 'Recursive', sans-serif;
+    font-size: 15px;
 }

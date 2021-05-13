@@ -7,10 +7,10 @@ import "../../styles/index.scss";
 export const Navbar = props => {
 	return (
 		<div>
-			<nav className="navbar navbar-expand-lg bg-transparent p-0">
-				<Link to="/" className="ml-5">
+			<nav className="navbar navbar-expand-lg bg-transparent p-0 fontsm-btn">
+				<Link to="/" className="ml-4">
 					<img
-						style={{ width: "80px" }}
+						style={{ width: "85px" }}
 						src="https://www.freepnglogos.com/uploads/star-wars-logo-31.png"
 						className="ml-5"
 					/>
@@ -19,7 +19,7 @@ export const Navbar = props => {
 					<button className="btn btn-outline-dark text-light ml-5">Characters</button>
 				</Link>
 				<Link to={"/info/" + props.id}>
-					<button className="btn btn-outline-dark text-light ml-5">Description</button>
+					<button className="btn btn-outline-dark text-light ml-3">Description</button>
 				</Link>
 				<div className="nav-item dropdown navbar-nav ml-auto">
 					<button

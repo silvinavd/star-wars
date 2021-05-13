@@ -14,15 +14,20 @@ export const Info = () => {
 
 	return (
 		<div>
-			<h1 className="text-danger text-center ml-2 mb-3">Description</h1>
-
+			<div className="text-effect">
+				<h1 className="neon" data-text="Description">
+					Characters
+				</h1>
+				<div className="gradient" />
+				<div className="spotlight" />
+			</div>
 			<div className="jumbotron jumbotron-fluid background h-100 mt-5">
 				<div className="container">
 					<h1 className="display-4 text-dark text-center font-weight-bold">
 						{store.info != null ? store.info.name : ""}
 					</h1>
 					<br /> <hr />
-					<div className="row flex-row text-danger justify-content-around mt-4">
+					<div className="row flex-row justify-content-around mt-4 fontsm">
 						<p className="">
 							Name <br />
 							{store.info != null ? store.info.name : ""}

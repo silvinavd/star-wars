@@ -10,8 +10,8 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<h1 className="text-danger text-center ml-2 mb-3">Characters</h1>
-			<div className="row d-flex-row overflow-auto flex-nowrap ">
+			<h1 className="text-center ml-2 mb-3 font">Characters</h1>
+			<div className="row d-flex-row overflow-auto flex-nowrap fontsm">
 				{store.personajes.map((item, index) => {
 					return (
 						<div key={index} className="col-sm-3 mb-3">
