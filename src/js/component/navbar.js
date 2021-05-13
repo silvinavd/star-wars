@@ -1,10 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
 
 import "../../styles/index.scss";
 
 export const Navbar = props => {
+	const { store, actions } = useContext(Context);
+	const params = useParams();
+
+	useEffect(() => {
+		actions.loadSomeData();
+	}, []);
+
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg bg-transparent p-0 fontsm-btn">
@@ -32,15 +40,7 @@ export const Navbar = props => {
 						Favorites
 					</button>
 					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-						<a className="dropdown-item" href="#">
-							Action
-						</a>
-						<a className="dropdown-item" href="#">
-							Another action
-						</a>
-						<a className="dropdown-item" href="#">
-							Something else here
-						</a>
+						{store.favoritos != null ? store.favoritos.tipo : ""} Something else here
 					</div>
 				</div>
 			</nav>
