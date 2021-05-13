@@ -13,6 +13,8 @@ export const Navbar = props => {
 		actions.loadSomeData();
 	}, []);
 
+	console.log("ACAAA", store.favoritos);
+
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg bg-transparent p-0 fontsm-btn">
@@ -39,8 +41,9 @@ export const Navbar = props => {
 						aria-expanded="false">
 						Favorites
 					</button>
+					{store.favoritos.name}
 					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-						{store.favoritos != null ? store.favoritos.tipo : ""} Something else here
+						Something else here
 					</div>
 				</div>
 			</nav>

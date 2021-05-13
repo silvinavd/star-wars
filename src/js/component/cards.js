@@ -4,8 +4,16 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Cards = props => {
-	const { store, actions } = useContext(Context);
+	const {
+		store,
+		actions: { setFavoritos }
+	} = useContext(Context);
 
+	function addFavorito() {
+		const addNameFavoritos = props.name;
+		console.log(props.name);
+		setFavoritos(store.favoritos.concat(addNameFavoritos));
+	}
 	return (
 		<div className="card-deck">
 			<div className="card bg-dark text-light p-1 m-1">
@@ -31,7 +39,7 @@ export const Cards = props => {
 							type="button"
 							className="btn btn-outline-warning btn-sm float-right"
 							onClick={() => {
-								actions.addFavorito(0, props.id);
+								addFavorito();
 							}}>
 							<i className="fas fa-heart" />
 						</button>

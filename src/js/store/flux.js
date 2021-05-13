@@ -42,16 +42,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			//Agrego a favoritos O==personaje   1==Planeta
-			addFavorito: (tipoparam, idparam) => {
-				const store = getStore();
+			/*addFavorito: (tipoparam, idparam, name) => {
+				const store = getStore(id);
 
 				let objeto = {
 					tipo: tipoparam,
-					id: idparam
+					id: idparam,
+					name: nombre
 				};
 				setStore({ favoritos: [...store.favoritos, objeto] });
-			},
+			},*/
 
+			setFavoritos: (arr = []) => {
+				setStore({
+					favoritos: arr
+				});
+			},
 			//Delete
 
 			changeColor: (index, color) => {
