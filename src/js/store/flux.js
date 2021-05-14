@@ -40,6 +40,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(data => setStore({ info: data.result.properties }));
 			},
+			//Traigo info planetas
+			getPlaneta: id => {
+				fetch("https://www.swapi.tech/api/planets/" + id)
+					.then(res => res.json())
+					.then(data => setStore({ info: data.result.properties }));
+			},
 
 			//Agrego a favoritos O==personaje   1==Planeta
 			/*addFavorito: (tipoparam, idparam, name) => {

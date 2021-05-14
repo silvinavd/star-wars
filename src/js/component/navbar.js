@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
@@ -6,15 +6,33 @@ import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 
 export const Navbar = props => {
-	const { store, actions } = useContext(Context);
-	const params = useParams();
+	const {
+		store,
+		actions: { setFavoritos }
+	} = useContext(Context);
+	const [mouse, setMouse] = useState();
+
+	/*const params = useParams();
 
 	useEffect(() => {
 		actions.loadSomeData();
 	}, []);
 
-	console.log("ACAAA", store.favoritos);
+    console.log("ACAAA", store.favoritos);*/
 
+	//FILTER
+	const eliminar = i => {
+		let nuevaLista = store.favoritos.filter((elem, index) => {
+			if (index != i) {
+				return elem;
+			}
+		});
+		setFavoritos(nuevaLista);
+	};
+
+	const mouseencima = i => {
+		setMouse(i);
+	};
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg bg-transparent p-0 fontsm-btn">
@@ -39,11 +57,30 @@ export const Navbar = props => {
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false">
-						Favorites
+						Favorites ({store.favoritos.length})
 					</button>
-					{store.favoritos.name}
+
 					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-						Something else here
+						{store.favoritos.map((item, index) => {
+							return (
+								<div
+									key={index}
+									className="dropdown-item"
+									onClick={() => {
+										eliminar(index);
+									}}
+									onMouseOver={() => {
+										mouseencima(index);
+									}}>
+									<li className="list-group-item">
+										{item}
+										<i
+											className={"fas fa-trash-alt float-right" + (mouse == index ? "" : " hide")}
+										/>
+									</li>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			</nav>

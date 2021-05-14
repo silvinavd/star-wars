@@ -11,6 +11,9 @@ export const Info = () => {
 	useEffect(() => {
 		actions.getPersonaje(params.id);
 	}, []);
+	// useEffect(() => {
+	// 	actions.getPlaneta(params.id);
+	// }, []);
 
 	return (
 		<div>
