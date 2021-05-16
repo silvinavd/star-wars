@@ -24,11 +24,6 @@ export const Cards = props => {
 				/>
 				<div className="card-body">
 					<h4 className="card-title">{props.name}</h4>
-					<p className="card-text">
-						<p> lorem15</p>
-						Hair Color: none <br />
-						Eye-Color: yellow
-					</p>
 					<div>
 						<Link to={"/info/" + props.id}>
 							<button type="button" className="btn btn-outline-secondary btn-sm  text-light">
@@ -37,7 +32,7 @@ export const Cards = props => {
 						</Link>
 						<button
 							type="button"
-							className="btn btn-outline-warning btn-sm float-right"
+							className="btn btn-outline-warning float-right p-0"
 							onClick={() => {
 								addFavorito();
 							}}>
