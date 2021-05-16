@@ -33,9 +33,6 @@ export const Demo = () => {
 					})}
 				</div>
 			</div>
-			<Link to="/">
-				<button className="btn btn-light">Back home</button>
-			</Link>
 		</div>
 	);
 };

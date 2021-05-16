@@ -18,9 +18,7 @@ export const Info = () => {
 	return (
 		<div>
 			<div className="text-effect">
-				<h1 className="neon" data-text="Description">
-					Characters
-				</h1>
+				<h1 className="font">Description</h1>
 				<div className="gradient" />
 				<div className="spotlight" />
 			</div>

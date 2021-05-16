@@ -72,12 +72,12 @@ export const Navbar = props => {
 									onMouseOver={() => {
 										mouseencima(index);
 									}}>
-									<li className="list-group-item">
-										{item}
-										<i
-											className={"fas fa-trash-alt float-right" + (mouse == index ? "" : " hide")}
-										/>
-									</li>
+									<li>{item}</li>
+									<i
+										className={
+											"fas fa-trash-alt float-right mt-1" + (mouse == index ? "" : " hide")
+										}
+									/>
 								</div>
 							);
 						})}
