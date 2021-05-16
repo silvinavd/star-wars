@@ -60,7 +60,7 @@ export const Navbar = props => {
 						Favorites ({store.favoritos.length})
 					</button>
 
-					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+					<div className="dropdown-menu dropdown-menu-right m-3" aria-labelledby="dropdownMenuButton">
 						{store.favoritos.map((item, index) => {
 							return (
 								<div
@@ -72,12 +72,15 @@ export const Navbar = props => {
 									onMouseOver={() => {
 										mouseencima(index);
 									}}>
-									<li>{item}</li>
-									<i
-										className={
-											"fas fa-trash-alt float-right mt-1" + (mouse == index ? "" : " hide")
-										}
-									/>
+									<li className="list-group-item d-flex">
+										{item}
+										<i
+											className={
+												"fas fa-trash-alt float-right mt-1 ml-2" +
+												(mouse == index ? "" : " hide")
+											}
+										/>
+									</li>
 								</div>
 							);
 						})}

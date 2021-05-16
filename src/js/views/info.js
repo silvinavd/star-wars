@@ -16,19 +16,13 @@ export const Info = () => {
 	// }, []);
 
 	return (
-		<div>
-			<div className="text-effect">
-				<h1 className="font">Description</h1>
-				<div className="gradient" />
-				<div className="spotlight" />
-			</div>
-			<div className="jumbotron jumbotron-fluid background h-100 mt-5">
-				<div className="container">
-					<h1 className="display-4 text-dark text-center font-weight-bold">
-						{store.info != null ? store.info.name : ""}
-					</h1>
-					<br /> <hr />
-					<div className="row flex-row justify-content-around mt-4 fontsm">
+		<div className="container">
+			<h1 className="font text-center mb-5">Description</h1>
+			<div className="infocard">
+				<h1 className="display-4  text-center fontbig">{store.info != null ? store.info.name : ""}</h1>
+				<div className="row flex-row justify-content-around mt-4 fontsm mb-5 mt-3">
+					<img src="https://cconnect.s3.amazonaws.com/wp-content/uploads/2019/06/Topps-Living-Set-Star-Wars-Trading-Cards-1-Vader-front-500.jpg" />
+					<div className="data">
 						<p className="">
 							Name <br />
 							{store.info != null ? store.info.name : ""}
