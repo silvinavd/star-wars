@@ -16,7 +16,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			personajes: [],
 			planetas: [],
 			info: null,
-			favoritos: []
+			favoritos: [],
+			categoria: null
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -62,6 +63,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			setFavoritos: (arr = []) => {
 				setStore({
 					favoritos: arr
+				});
+			},
+
+			setCategoria: (cat = []) => {
+				setStore({
+					categoria: cat
 				});
 			},
 			//Delete
