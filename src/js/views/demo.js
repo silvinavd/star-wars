@@ -15,7 +15,7 @@ export const Demo = () => {
 				{store.personajes.map((item, index) => {
 					return (
 						<div key={index} className="col-sm-3 mb-3">
-							<Cards name={item.name} id={item.uid} />
+							<Cards name={item.name} id={item.uid} tipo={"personaje"} />
 						</div>
 					);
 				})}
@@ -27,7 +27,7 @@ export const Demo = () => {
 					{store.planetas.map((item, index) => {
 						return (
 							<div key={index} className="col-sm-3 mb-3">
-								<Cards name={item.name} id={item.uid} />
+								<Cards name={item.name} id={item.uid} tipo={"planeta"} />
 							</div>
 						);
 					})}

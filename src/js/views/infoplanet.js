@@ -4,16 +4,16 @@ import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
 import "../../styles/info.scss";
 
-export const Info = () => {
+export const InfoPlanetas = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 
-	useEffect(() => {
-		actions.getPersonaje(params.id);
-	}, []);
 	// useEffect(() => {
-	// 	actions.getPlaneta(params.id);
+	// 	actions.getPersonaje(params.id);
 	// }, []);
+	useEffect(() => {
+		actions.getPlaneta(params.id);
+	}, []);
 
 	return (
 		<div className="container">
