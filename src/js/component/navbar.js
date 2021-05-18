@@ -44,10 +44,7 @@ export const Navbar = props => {
 					/>
 				</Link>
 				<Link to="/">
-					<button className="btn btn-sm btn-outline-dark text-light ml-5">Characters</button>
-				</Link>
-				<Link to={"/info/" + props.id}>
-					<button className="btn btn-sm btn-outline-dark text-light ml-3">Description</button>
+					<button className="btn btn-sm btn-outline-dark text-light ml-5">Home</button>
 				</Link>
 				<div className="nav-item dropdown navbar-nav ml-auto">
 					<button
