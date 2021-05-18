@@ -19,13 +19,13 @@ export const InfoPlanetas = () => {
 		Tatooine: "https://www.wallpapertip.com/wmimgs/41-415587_tatooine-wallpaper-4k.jpg",
 		Alderaan:
 			"https://www.chicagotribune.com/resizer/O5NI3Oj7X8-GDODlQEo_myJwIJ8=/1200x0/top/www.trbimg.com/img-563558af/turbine/ct-star-wars-destruction-of-alderaan-justified-20151031",
-		"Yavin IV":
-			"https://static.wikia.nocookie.net/esstarwars/images/d/d4/Yavin-4-SWCT.png/revision/latest?cb=20170924222729",
+		"Yavin IV": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Star_Wars_in_Guatemala.jpg",
 		Hoth:
 			"https://blog.es.playstation.com/tachyon/sites/14/2015/11/unnamed-file-54.jpg?resize=1088,600&crop_strategy=smart",
 		Dagobah:
 			"https://www.technobuffalo.com/sites/technobuffalo.com/files/styles/large/public/wp/2016/04/dagobah-002.jpg",
-		Bespin: "https://static3.srcdn.com/wordpress/wp-content/uploads/2020/02/Bespin-Feature-Image-1.jpg",
+		Bespin:
+			"http://cdn.eso.org/images/screen/eso1529a.jpg",
 		Endor:
 			"https://static.wikia.nocookie.net/esstarwars/images/9/9f/Endor_new.png/revision/latest?cb=20191222050241",
 		Naboo:
@@ -37,12 +37,12 @@ export const InfoPlanetas = () => {
 
 	return (
 		<div className="container">
-			<h1 className="font text-center mb-5">Description</h1>
+			<h1 className="font text-center mb-3">Description</h1>
 			<div className="infocard">
 				<h1 className="display-4  text-center fontbig">{store.info != null ? store.info.name : ""}</h1>
-				<div className="row flex-row justify-content-around mt-4 fontsm mb-5 mt-3">
-					<img src={store.info != null ? imgs[store.info.name] : ""} style={{ width: 500, height: 500 }} />
-					<div className="data">
+				<div className="row flex-row justify-content-around mt-4 fontsm mb-3 mt-2">
+					<img src={store.info != null ? imgs[store.info.name] : ""} style={{ width: 800 }} />
+					<div className="data mt-4 mr-3">
 						<p className="">
 							Name <br />
 							{store.info != null ? store.info.name : ""}

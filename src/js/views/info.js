@@ -16,9 +16,9 @@ export const Info = () => {
 	// }, []);
 
 	const images = {
-		"C-3PO": "https://www.alfabetajuega.com/multimedia/imagenes/201703/183307.alfabetajuega-c3po.jpg",
+		"C-3PO": "https://files.merca20.com/uploads/2020/09/star-wars.jpg",
 		"Luke Skywalker":
-			"http://www.redcarpetnewstv.com/wp-content/uploads/2012/11/Star-Wars-Luke-Skywalker-Episode-VII.jpg",
+			"https://www.wallpapertip.com/wmimgs/9-98727_no-caption-provided-luke-skywalker-holding-lightsaber.jpg",
 		"R2-D2":
 			"https://cadenaser00.epimg.net/ser/imagenes/2017/06/29/gente/1498741307_615132_1498741387_noticia_normal.jpg",
 		"Darth Vader": "https://www.milenio.com/uploads/media/2015/12/15/darth-vader.jpeg",
@@ -33,13 +33,13 @@ export const Info = () => {
 	};
 	return (
 		<div className="container">
-			<h1 className="font text-center mb-5">Description</h1>
+			<h1 className="font text-center mb-3">Description</h1>
 			<div className="infocard">
 				<h1 className="display-4  text-center fontbig">{store.info != null ? store.info.name : ""}</h1>
-				<div className="row flex-row justify-content-around mt-4 fontsm mb-5 mt-3">
-					<img src={store.info != null ? images[store.info.name] : ""} style={{ width: 700, height: 500 }} />
+				<div className="row flex-row justify-content-around mt-4 fontsm mb-3 mt-2">
+					<img src={store.info != null ? images[store.info.name] : ""} style={{ width: 800 }} />
 
-					<div className="data">
+					<div className="data mt-4 mr-3">
 						<p className="">
 							Name <br />
 							{store.info != null ? store.info.name : ""}
