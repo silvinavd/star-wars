@@ -16,23 +16,26 @@ export const InfoPlanetas = () => {
 	}, []);
 
 	const imgs = {
-		Tatooine: "https://www.wallpapertip.com/wmimgs/41-415587_tatooine-wallpaper-4k.jpg",
+		Tatooine:
+			"https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357",
 		Alderaan:
-			"https://www.chicagotribune.com/resizer/O5NI3Oj7X8-GDODlQEo_myJwIJ8=/1200x0/top/www.trbimg.com/img-563558af/turbine/ct-star-wars-destruction-of-alderaan-justified-20151031",
-		"Yavin IV": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Star_Wars_in_Guatemala.jpg",
+			"https://static.wikia.nocookie.net/esstarwars/images/4/4a/Alderaan.jpg/revision/latest?cb=20100723184830",
+		"Yavin IV":
+			"https://static.wikia.nocookie.net/esstarwars/images/d/d4/Yavin-4-SWCT.png/revision/latest?cb=20170924222729",
 		Hoth:
-			"https://blog.es.playstation.com/tachyon/sites/14/2015/11/unnamed-file-54.jpg?resize=1088,600&crop_strategy=smart",
+			"https://static.wikia.nocookie.net/esstarwars/images/1/1d/Hoth_SWCT.png/revision/latest?cb=20170802030704",
 		Dagobah:
-			"https://www.technobuffalo.com/sites/technobuffalo.com/files/styles/large/public/wp/2016/04/dagobah-002.jpg",
+			"https://static.wikia.nocookie.net/esstarwars/images/1/1c/Dagobah.jpg/revision/latest?cb=20061117132132",
 		Bespin:
-			"http://cdn.eso.org/images/screen/eso1529a.jpg",
+			"https://static.wikia.nocookie.net/esstarwars/images/2/2c/Bespin_EotECR.png/revision/latest?cb=20170527220537",
 		Endor:
-			"https://static.wikia.nocookie.net/esstarwars/images/9/9f/Endor_new.png/revision/latest?cb=20191222050241",
+			"https://static.wikia.nocookie.net/esstarwars/images/5/50/Endor_FFGRebellion.png/revision/latest?cb=20170629163352",
 		Naboo:
-			"https://static.wikia.nocookie.net/esstarwars/images/c/c0/Naboo_system.jpg/revision/latest?cb=20121125215519",
+			"https://static.wikia.nocookie.net/esstarwars/images/f/f0/Naboo_planet.png/revision/latest?cb=20190928214307",
 		Coruscant:
-			"https://p4.wallpaperbetter.com/wallpaper/982/673/193/coruscant-science-fiction-star-wars-wallpaper-preview.jpg",
-		Kamino: "https://starwarsblog.starwars.com/wp-content/uploads/2015/09/Image-00-Header-1536x864-688067241292.jpg"
+			"https://static.wikia.nocookie.net/esstarwars/images/9/92/Coruscant_SWCT.png/revision/latest?cb=20200927225715",
+		Kamino:
+			"https://static.wikia.nocookie.net/esstarwars/images/5/52/Kamino-DB.png/revision/latest?cb=20160913200828"
 	};
 
 	return (
@@ -41,7 +44,7 @@ export const InfoPlanetas = () => {
 			<div className="infocard">
 				<h1 className="display-4  text-center fontbig">{store.info != null ? store.info.name : ""}</h1>
 				<div className="row flex-row justify-content-around mt-4 fontsm mb-3 mt-2">
-					<img src={store.info != null ? imgs[store.info.name] : ""} style={{ width: 800 }} />
+					<img src={store.info != null ? imgs[store.info.name] : ""} style={{ width: 600 }} />
 					<div className="data mt-4 mr-3">
 						<p className="">
 							Name <br />
